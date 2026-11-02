@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="ka" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaTech — ინოვაციური ტექნოლოგიური გადაწყვეტილებები თქვენი ბიზნესისთვის">
+  <title>NovaTech — ინოვაციური ტექნოლოგიები</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Georgian', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            bg: '#0a0a0f',
+            'bg-elevated': '#12121a',
+            surface: '#1a1a2e',
+            'border-custom': 'rgba(255, 255, 255, 0.08)',
+            'border-hover': 'rgba(255, 255, 255, 0.2)',
+            'text-main': '#f1f1f8',
+            'text-muted': '#9ca3af',
+            'text-dim': '#6b7280',
+            primary: '#6c5ce7',
+            'primary-light': '#a29bfe',
+            accent: '#00d2ff',
+            'accent-2': '#7b61ff',
+            purple: '#a29bfe',
+            teal: '#00d2ff',
+            amber: '#ffc048',
+            rose: '#ff6b9d',
+            emerald: '#00e68a',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #0a0a0f;
+      color: #f1f1f8;
+    }
+
+    .nav-link {
+      position: relative !important;
+      color: #e5e7eb;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #ffffff !important;
+    }
+
+    @keyframes orbFloat {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      25% {
+        transform: translate(30px, -40px) scale(1.05);
+      }
+
+      50% {
+        transform: translate(-20px, 20px) scale(0.95);
+      }
+
+      75% {
+        transform: translate(40px, 30px) scale(1.02);
+      }
+    }
+
+    @keyframes logoPulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes dotPulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(0, 230, 138, 0.4);
+      }
+
+      50% {
+        opacity: 0.6;
+        box-shadow: 0 0 0 8px rgba(0, 230, 138, 0);
+      }
+    }
+
+    @keyframes scrollBounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      50% {
+        transform: translateY(12px);
+        opacity: 0.3;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatCard {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @keyframes countUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-orb {
+      animation: orbFloat 20s ease-in-out infinite;
+    }
+
+    .animate-orb-delay-1 {
+      animation: orbFloat 20s ease-in-out infinite -7s;
+    }
+
+    .animate-orb-delay-2 {
+      animation: orbFloat 20s ease-in-out infinite -14s;
+    }
+
+    .animate-logo-pulse {
+      animation: logoPulse 3s ease-in-out infinite;
+    }
+
+    .animate-dot-pulse {
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+
+    .animate-scroll-bounce {
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .animate-fade-in-up-delay-1 {
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-up-delay-2 {
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-up-delay-3 {
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-up-delay-4 {
+      animation: fadeInUp 0.8s ease-out 0.8s both;
+    }
+
+    .animate-fade-in-down {
+      animation: fadeInDown 0.8s ease-out both;
+    }
+
+    .animate-float-card {
+      animation: floatCard 6s ease-in-out infinite;
+    }
+
+    .animate-float-card-delay {
+      animation: floatCard 6s ease-in-out infinite 3s;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #6c5ce7, #00d2ff, #a29bfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(135deg, #6c5ce7 0%, #00d2ff 50%, #a29bfe 100%);
+    }
+
+    .hero-grid-lines {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    }
+
+    .hero-bottom-fade {
+      background: linear-gradient(to bottom,
+          transparent 0%,
+          rgba(10, 10, 15, 0.2) 25%,
+          rgba(10, 10, 15, 0.6) 55%,
+          rgba(10, 10, 15, 0.9) 80%,
+          #0a0a0f 100%);
+    }
+
+    .features-top-glow {
+      background: radial-gradient(ellipse 70% 50% at 50% 0%,
+          rgba(108, 92, 231, 0.15) 0%,
+          rgba(0, 210, 255, 0.05) 45%,
+          transparent 100%);
+    }
+
+    .card-glow-top {
+      background: linear-gradient(135deg, #6c5ce7 0%, #00d2ff 50%, #a29bfe 100%);
+    }
+
+    .about-pattern-inner::after {
+      content: '';
+      position: absolute;
+      inset: 20%;
+      background: linear-gradient(135deg, #6c5ce7 0%, #00d2ff 50%, #a29bfe 100%);
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+      animation: orbFloat 15s ease-in-out infinite;
+    }
+
+    .about-pattern-grid::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Scroll reveal */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal-item.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Smooth gliding and moveable nav indicator */
+    #nav-indicator {
+      position: absolute;
+      bottom: 0px;
+      height: 3px;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #6c5ce7, #00d2ff, #a29bfe);
+      box-shadow: 0 0 12px rgba(0, 210, 255, 0.8), 0 0 4px rgba(108, 92, 231, 0.6);
+      transition: left 0.35s cubic-bezier(0.34, 1.3, 0.64, 1), width 0.3s ease, opacity 0.25s ease;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Card hover glow follow effect */
+    .card-hover-glow {
+      cursor: pointer;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover-glow:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 8px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-hover-glow:hover .card-glow-line {
+      opacity: 1;
+    }
+
+    .card-hover-glow:hover .card-icon-box {
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0a0f;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2a2a3e;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3a3a52;
+    }
+
+    /* Mobile menu drawer */
+    .mobile-menu {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateX(100%);
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    @media (min-width: 768px) {
+      .mobile-menu {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-bg text-text-main font-sans antialiased overflow-x-hidden leading-relaxed">
+
+  <!-- Mobile Overlay Backdrop (z-40 sits behind the header and menu) -->
+  <div id="mobile-overlay"
+    class="fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+  </div>
+
+  <!-- Unified Continuous Ambient Background (Seamless across the entire website) -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div
+      class="absolute -top-[10%] -right-[5%] w-[600px] h-[600px] rounded-full bg-primary/20 blur-[130px] animate-orb">
+    </div>
+    <div
+      class="absolute top-[25%] -left-[10%] w-[550px] h-[550px] rounded-full bg-accent/15 blur-[140px] animate-orb-delay-1">
+    </div>
+    <div
+      class="absolute top-[60%] -right-[10%] w-[500px] h-[500px] rounded-full bg-accent-2/15 blur-[130px] animate-orb-delay-2">
+    </div>
+    <div
+      class="absolute bottom-[5%] left-[15%] w-[500px] h-[500px] rounded-full bg-primary/15 blur-[130px] animate-orb">
+    </div>
+    <div class="absolute inset-0 hero-grid-lines opacity-60"></div>
+  </div>
+
+  <!-- ===== HEADER / NAVIGATION BAR ===== -->
+  <header id="header" class="fixed top-0 left-0 w-full h-[72px] z-50 transition-all duration-300">
+    <nav class="max-w-[1200px] mx-auto px-6 md:px-8 flex items-center justify-between h-full">
+      <!-- Logo -->
+      <a href="#hero" id="nav-logo" class="flex items-center gap-2 z-50">
+        <span class="text-xl text-primary-light animate-logo-pulse">◆</span>
+        <span class="text-xl font-extrabold tracking-tight">Nova<span class="text-primary-light">Tech</span></span>
+      </a>
+
+      <!-- Navigation Menu / Catalogue Drawer -->
+      <div id="nav-menu"
+        class="mobile-menu fixed md:static top-0 right-0 w-[290px] sm:w-[320px] md:w-auto h-screen md:h-auto bg-[#12121a] md:bg-transparent border-l md:border-l-0 border-border-custom p-6 md:p-0 z-50 flex flex-col md:flex-row justify-between md:justify-start shadow-2xl">
+
+        <!-- Mobile Drawer Header -->
+        <div class="flex items-center justify-between pb-5 border-b border-white/10 md:hidden">
+          <div class="flex items-center gap-2">
+            <span class="text-primary-light text-lg">☰</span>
+            <span class="text-sm font-bold uppercase tracking-wider text-white">მენიუ / კატალოგი</span>
+          </div>
+          <button id="nav-close"
+            class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/10 border border-white/20 text-white hover:bg-white/20 text-xl transition-colors"
+            aria-label="Close menu">&times;</button>
+        </div>
+
+        <!-- Links List -->
+        <ul
+          class="nav-list-container relative flex flex-col md:flex-row items-stretch md:items-center gap-2 md:gap-1 my-6 md:my-0">
+          <li>
+            <a href="#hero"
+              class="nav-link flex items-center gap-3 py-3 md:py-2 px-4 rounded-xl text-base md:text-sm font-semibold text-white hover:bg-white/10 md:hover:bg-transparent transition-all active"
+              data-section="hero">
+              <span class="md:hidden text-lg">🏠</span>
+              <span class="nav-text text-white font-medium">მთავარი</span>
+            </a>
+          </li>
+          <li>
+            <a href="#features"
+              class="nav-link flex items-center gap-3 py-3 md:py-2 px-4 rounded-xl text-base md:text-sm font-semibold text-white hover:bg-white/10 md:hover:bg-transparent transition-all"
+              data-section="features">
+              <span class="md:hidden text-lg">⚡</span>
+              <span class="nav-text text-white font-medium">სერვისები</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about"
+              class="nav-link flex items-center gap-3 py-3 md:py-2 px-4 rounded-xl text-base md:text-sm font-semibold text-white hover:bg-white/10 md:hover:bg-transparent transition-all"
+              data-section="about">
+              <span class="md:hidden text-lg">ℹ️</span>
+              <span class="nav-text text-white font-medium">ჩვენს შესახებ</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact"
+              class="nav-link flex items-center gap-3 py-3 md:py-2 px-4 rounded-xl text-base md:text-sm font-semibold text-white hover:bg-white/10 md:hover:bg-transparent transition-all"
+              data-section="contact">
+              <span class="md:hidden text-lg">✉️</span>
+              <span class="nav-text text-white font-medium">კონტაქტი</span>
+            </a>
+          </li>
+          <!-- Moveable sliding indicator on desktop -->
+          <span id="nav-indicator" class="hidden md:block pointer-events-none" style="opacity: 0;"></span>
+        </ul>
+
+        <!-- Mobile Drawer Footer CTA -->
+        <div class="pt-5 border-t border-border-custom md:hidden mt-auto">
+          <a href="#contact" onclick="closeMobileMenu()"
+            class="btn-gradient w-full py-3 text-white text-center text-sm font-semibold rounded-xl block shadow-[0_4px_20px_rgba(108,92,231,0.3)]">
+            დაწყება
+          </a>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <a href="#contact" id="cta-header"
+          class="hidden md:inline-flex items-center px-5 py-2 text-sm font-semibold border border-border-hover rounded-xl text-text-main hover:border-primary-light hover:text-primary-light hover:bg-primary/10 transition-all">დაწყება</a>
+
+        <!-- Mobile Catalogue / Menu Button -->
+        <button id="nav-toggle"
+          class="md:hidden flex items-center gap-2 px-3.5 py-1.5 bg-bg-elevated/90 border border-border-hover rounded-xl text-text-main text-sm font-semibold hover:border-primary-light hover:text-primary-light transition-all shadow-sm active:scale-95"
+          aria-label="Open menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="text-primary-light">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span class="font-medium">მენიუ</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-[72px]">
+
+    <!-- Content -->
+    <div class="relative z-10 text-center max-w-[1200px] mx-auto px-6 md:px-8">
+      <!-- Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-5 py-1.5 bg-primary/10 border border-primary/25 rounded-full text-sm font-medium text-primary-light mb-8 animate-fade-in-down">
+        <span class="w-2 h-2 bg-emerald rounded-full animate-dot-pulse"></span>
+        ახალი პლატფორმა უკვე ხელმისაწვდომია
+      </div>
+
+      <!-- Title -->
+      <h1
+        class="text-[clamp(2.5rem,5vw+1rem,4.5rem)] font-black leading-[1.1] tracking-tight mb-8 animate-fade-in-up-delay-1">
+        მომავლის <span class="gradient-text">ტექნოლოგიები</span><br>
+        დღეს თქვენთვის
+      </h1>
+
+      <!-- Description -->
+      <p class="text-lg text-text-muted max-w-[600px] mx-auto mb-10 animate-fade-in-up-delay-2">
+        ჩვენ ვქმნით ინოვაციურ ციფრულ გადაწყვეტილებებს, რომლებიც ეხმარება ბიზნესს
+        გაიზარდოს და მიაღწიოს წარმატებას თანამედროვე ციფრულ სამყაროში.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up-delay-3">
+        <a href="#contact" id="cta-hero"
+          class="btn-gradient inline-flex items-center gap-2 px-8 py-3.5 text-white font-semibold rounded-xl shadow-[0_4px_20px_rgba(108,92,231,0.3)] hover:shadow-[0_8px_32px_rgba(108,92,231,0.4)] hover:-translate-y-0.5 transition-all group">
+          <span>უფასოდ დაწყება</span>
+          <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#features" id="cta-demo"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-white/5 backdrop-blur-xl border border-border-custom rounded-xl font-semibold hover:bg-white/10 hover:border-border-hover hover:-translate-y-0.5 transition-all">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
+          <span>დემოს ნახვა</span>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 animate-fade-in-up-delay-4">
+        <div class="flex flex-col items-center">
+          <div class="flex items-baseline">
+            <span class="stat-number text-3xl font-extrabold" data-target="500">0</span>
+            <span class="text-2xl font-bold text-primary-light">+</span>
+          </div>
+          <span class="text-sm text-text-muted mt-1">კლიენტი</span>
+        </div>
+        <div class="hidden sm:block w-px h-10 bg-border-custom"></div>
+        <div class="block sm:hidden w-10 h-px bg-border-custom"></div>
+        <div class="flex flex-col items-center">
+          <div class="flex items-baseline">
+            <span class="stat-number text-3xl font-extrabold" data-target="98">0</span>
+            <span class="text-2xl font-bold text-primary-light">%</span>
+          </div>
+          <span class="text-sm text-text-muted mt-1">კმაყოფილება</span>
+        </div>
+        <div class="hidden sm:block w-px h-10 bg-border-custom"></div>
+        <div class="block sm:hidden w-10 h-px bg-border-custom"></div>
+        <div class="flex flex-col items-center">
+          <div class="flex items-baseline">
+            <span class="stat-number text-3xl font-extrabold" data-target="24">0</span>
+            <span class="text-2xl font-bold text-primary-light">/7</span>
+          </div>
+          <span class="text-sm text-text-muted mt-1">მხარდაჭერა</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+      <div class="w-6 h-10 border-2 border-border-hover rounded-full flex justify-center pt-1.5">
+        <div class="w-1 h-2 bg-primary-light rounded-full animate-scroll-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section id="features" class="py-24 md:py-32 relative">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-16 reveal-item">
+        <span
+          class="inline-block text-sm font-semibold text-primary-light uppercase tracking-widest mb-4 px-6 py-1 bg-primary/10 border border-primary/20 rounded-full">სერვისები</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold leading-tight mb-6">რას <span
+            class="gradient-text">გთავაზობთ</span></h2>
+        <p class="text-lg text-text-muted max-w-[600px] mx-auto">ჩვენი გუნდი გთავაზობთ სრულ სპექტრს ციფრული სერვისებისა,
+          რომლებიც მორგებულია თქვენს საჭიროებებზე.</p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1: Web Design -->
+        <div id="card-design" data-service="ვებ დიზაინი"
+          class="card-hover-glow reveal-item relative bg-bg-elevated/60 border border-border-custom rounded-2xl p-8 overflow-hidden group cursor-pointer">
+          <div class="card-glow-line absolute top-0 left-0 right-0 h-px card-glow-top opacity-0 transition-opacity">
+          </div>
+          <div
+            class="card-icon-box w-14 h-14 flex items-center justify-center bg-primary/10 border border-primary/20 rounded-xl text-primary-light mb-6 transition-all duration-300">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">ვებ დიზაინი</h3>
+          <p class="text-sm text-text-muted leading-relaxed mb-6">თანამედროვე და რესპონსიული ვებგვერდების შექმნა,
+            რომლებიც ადაპტირდება ნებისმიერ მოწყობილობაზე.</p>
+          <a href="#contact" data-service="ვებ დიზაინი"
+            class="service-link text-sm font-semibold text-primary-light inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            <span class="absolute inset-0 z-10" aria-hidden="true"></span>
+            გაიგე მეტი <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Card 2: Development -->
+        <div id="card-dev" data-service="აპლიკაციის განვითარება"
+          class="card-hover-glow reveal-item relative bg-bg-elevated/60 border border-border-custom rounded-2xl p-8 overflow-hidden group cursor-pointer">
+          <div class="card-glow-line absolute top-0 left-0 right-0 h-px card-glow-top opacity-0 transition-opacity">
+          </div>
+          <div
+            class="card-icon-box w-14 h-14 flex items-center justify-center bg-purple/10 border border-purple/20 rounded-xl text-purple mb-6 transition-all duration-300">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">აპლიკაციის განვითარება</h3>
+          <p class="text-sm text-text-muted leading-relaxed mb-6">მაღალი ხარისხის მობილური და ვებ აპლიკაციების
+            დეველოპმენტი საუკეთესო ტექნოლოგიებით.</p>
+          <a href="#contact" data-service="აპლიკაციის განვითარება"
+            class="service-link text-sm font-semibold text-primary-light inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            <span class="absolute inset-0 z-10" aria-hidden="true"></span>
+            გაიგე მეტი <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Card 3: Cloud -->
+        <div id="card-cloud" data-service="ღრუბლოვანი სერვისები"
+          class="card-hover-glow reveal-item relative bg-bg-elevated/60 border border-border-custom rounded-2xl p-8 overflow-hidden group cursor-pointer">
+          <div class="card-glow-line absolute top-0 left-0 right-0 h-px card-glow-top opacity-0 transition-opacity">
+          </div>
+          <div
+            class="card-icon-box w-14 h-14 flex items-center justify-center bg-teal/10 border border-teal/20 rounded-xl text-teal mb-6 transition-all duration-300">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">ღრუბლოვანი სერვისები</h3>
+          <p class="text-sm text-text-muted leading-relaxed mb-6">სანდო და მასშტაბირებადი ღრუბლოვანი ინფრასტრუქტურა
+            თქვენი ბიზნესის უწყვეტი მუშაობისთვის.</p>
+          <a href="#contact" data-service="ღრუბლოვანი სერვისები"
+            class="service-link text-sm font-semibold text-primary-light inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            <span class="absolute inset-0 z-10" aria-hidden="true"></span>
+            გაიგე მეტი <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Card 4: AI -->
+        <div id="card-ai" data-service="ხელოვნური ინტელექტი"
+          class="card-hover-glow reveal-item relative bg-bg-elevated/60 border border-border-custom rounded-2xl p-8 overflow-hidden group cursor-pointer">
+          <div class="card-glow-line absolute top-0 left-0 right-0 h-px card-glow-top opacity-0 transition-opacity">
+          </div>
+          <div
+            class="card-icon-box w-14 h-14 flex items-center justify-center bg-amber/10 border border-amber/20 rounded-xl text-amber mb-6 transition-all duration-300">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">ხელოვნური ინტელექტი</h3>
+          <p class="text-sm text-text-muted leading-relaxed mb-6">AI-ზე დაფუძნებული ჭკვიანი გადაწყვეტილებები, რომლებიც
+            ავტომატიზირებს პროცესებს და ზრდის ეფექტურობას.</p>
+          <a href="#contact" data-service="ხელოვნური ინტელექტი"
+            class="service-link text-sm font-semibold text-primary-light inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            <span class="absolute inset-0 z-10" aria-hidden="true"></span>
+            გაიგე მეტი <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Card 5: Security -->
+        <div id="card-security" data-service="კიბერუსაფრთხოება"
+          class="card-hover-glow reveal-item relative bg-bg-elevated/60 border border-border-custom rounded-2xl p-8 overflow-hidden group cursor-pointer">
+          <div class="card-glow-line absolute top-0 left-0 right-0 h-px card-glow-top opacity-0 transition-opacity">
+          </div>
+          <div
+            class="card-icon-box w-14 h-14 flex items-center justify-center bg-rose/10 border border-rose/20 rounded-xl text-rose mb-6 transition-all duration-300">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">კიბერუსაფრთხოება</h3>
+          <p class="text-sm text-text-muted leading-relaxed mb-6">მაღალი დონის დაცვის სისტემები, რომლებიც იცავს თქვენს
+            მონაცემებს კიბერ საფრთხეებისგან.</p>
+          <a href="#contact" data-service="კიბერუსაფრთხოება"
+            class="service-link text-sm font-semibold text-primary-light inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            <span class="absolute inset-0 z-10" aria-hidden="true"></span>
+            გაიგე მეტი <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Card 6: Analytics -->
+        <div id="card-analytics" data-service="ანალიტიკა"
+          class="card-hover-glow reveal-item relative bg-bg-elevated/60 border border-border-custom rounded-2xl p-8 overflow-hidden group cursor-pointer">
+          <div class="card-glow-line absolute top-0 left-0 right-0 h-px card-glow-top opacity-0 transition-opacity">
+          </div>
+          <div
+            class="card-icon-box w-14 h-14 flex items-center justify-center bg-emerald/10 border border-emerald/20 rounded-xl text-emerald mb-6 transition-all duration-300">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">ანალიტიკა</h3>
+          <p class="text-sm text-text-muted leading-relaxed mb-6">მონაცემთა ანალიზის ინსტრუმენტები, რომლებიც გეხმარებათ
+            სწორი ბიზნეს გადაწყვეტილებების მიღებაში.</p>
+          <a href="#contact" data-service="ანალიტიკა"
+            class="service-link text-sm font-semibold text-primary-light inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            <span class="absolute inset-0 z-10" aria-hidden="true"></span>
+            გაიგე მეტი <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="py-24 md:py-32">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Visual -->
+        <div class="relative reveal-item">
+          <div class="relative w-full max-w-[480px] mx-auto aspect-square">
+            <!-- Pattern Background -->
+            <div
+              class="about-pattern-grid about-pattern-inner relative w-full h-full rounded-3xl border border-border-custom overflow-hidden"
+              style="background: radial-gradient(circle at 30% 40%, rgba(108,92,231,0.2), transparent 50%), radial-gradient(circle at 70% 60%, rgba(0,210,255,0.15), transparent 50%);">
+            </div>
+
+            <!-- Floating Card 1 -->
+            <div
+              class="absolute top-[10%] -right-[5%] md:-right-[10%] bg-bg-elevated/90 backdrop-blur-2xl border border-border-custom rounded-xl px-5 py-3 flex items-center gap-3 shadow-lg z-10 animate-float-card">
+              <div class="text-2xl">🚀</div>
+              <div>
+                <strong class="block text-lg font-bold">150+</strong>
+                <small class="text-xs text-text-muted">პროექტი</small>
+              </div>
+            </div>
+
+            <!-- Floating Card 2 -->
+            <div
+              class="absolute bottom-[15%] -left-[3%] md:-left-[8%] bg-bg-elevated/90 backdrop-blur-2xl border border-border-custom rounded-xl px-5 py-3 flex items-center gap-3 shadow-lg z-10 animate-float-card-delay">
+              <div class="text-2xl">⭐</div>
+              <div>
+                <strong class="block text-lg font-bold">4.9/5</strong>
+                <small class="text-xs text-text-muted">რეიტინგი</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="reveal-item text-center lg:text-left">
+          <span
+            class="inline-block text-sm font-semibold text-primary-light uppercase tracking-widest mb-4 px-6 py-1 bg-primary/10 border border-primary/20 rounded-full">ჩვენს
+            შესახებ</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold leading-tight mb-6">რატომ <span
+              class="gradient-text">NovaTech</span>?</h2>
+          <p class="text-text-muted leading-loose mb-8">
+            2020 წლიდან ჩვენ ვეხმარებით ბიზნესებს ციფრულ ტრანსფორმაციაში. ჩვენი
+            გამოცდილი გუნდი აერთიანებს ინოვაციურ ტექნოლოგიებსა და კრეატიულ აზროვნებას,
+            რათა შექმნას გადაწყვეტილებები, რომლებიც რეალურ შედეგებს მოაქვს.
+          </p>
+
+          <!-- Feature checklist -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <div class="flex items-center gap-2 text-sm font-medium">
+              <div
+                class="w-6 h-6 flex items-center justify-center bg-emerald/10 text-emerald rounded-full text-xs font-bold shrink-0">
+                ✓</div>
+              <span>გამოცდილი პროფესიონალები</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm font-medium">
+              <div
+                class="w-6 h-6 flex items-center justify-center bg-emerald/10 text-emerald rounded-full text-xs font-bold shrink-0">
+                ✓</div>
+              <span>24/7 ტექნიკური მხარდაჭერა</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm font-medium">
+              <div
+                class="w-6 h-6 flex items-center justify-center bg-emerald/10 text-emerald rounded-full text-xs font-bold shrink-0">
+                ✓</div>
+              <span>ინდივიდუალური მიდგომა</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm font-medium">
+              <div
+                class="w-6 h-6 flex items-center justify-center bg-emerald/10 text-emerald rounded-full text-xs font-bold shrink-0">
+                ✓</div>
+              <span>თანამედროვე ტექნოლოგიები</span>
+            </div>
+          </div>
+
+          <a href="#contact" id="cta-about"
+            class="btn-gradient inline-flex items-center gap-2 px-8 py-3.5 text-white font-semibold rounded-xl shadow-[0_4px_20px_rgba(108,92,231,0.3)] hover:shadow-[0_8px_32px_rgba(108,92,231,0.4)] hover:-translate-y-0.5 transition-all group">
+            <span>დაგვიკავშირდით</span>
+            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="py-24 md:py-32">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8">
+      <div class="text-center mb-16 reveal-item">
+        <span
+          class="inline-block text-sm font-semibold text-primary-light uppercase tracking-widest mb-4 px-6 py-1 bg-primary/10 border border-primary/20 rounded-full">კონტაქტი</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold leading-tight mb-6">მოგვწერეთ <span
+            class="gradient-text">შეტყობინება</span></h2>
+        <p class="text-lg text-text-muted max-w-[600px] mx-auto">გაქვთ კითხვა ან გსურთ თანამშრომლობა? შეავსეთ ფორმა და
+          ჩვენ დაგიკავშირდებით.</p>
+      </div>
+
+      <form id="contact-form" class="max-w-[640px] mx-auto flex flex-col gap-5 reveal-item">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="flex flex-col gap-2">
+            <label for="name" class="text-sm font-semibold text-text-muted">სახელი</label>
+            <input type="text" id="name" placeholder="თქვენი სახელი" required
+              class="bg-bg-elevated border border-border-custom rounded-xl px-4 py-3 text-text-main placeholder:text-text-dim outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all">
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-sm font-semibold text-text-muted">ელ-ფოსტა</label>
+            <input type="email" id="email" placeholder="your@email.com" required
+              class="bg-bg-elevated border border-border-custom rounded-xl px-4 py-3 text-text-main placeholder:text-text-dim outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all">
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="message" class="text-sm font-semibold text-text-muted">შეტყობინება</label>
+          <textarea id="message" rows="5" placeholder="თქვენი შეტყობინება..." required
+            class="bg-bg-elevated border border-border-custom rounded-xl px-4 py-3 text-text-main placeholder:text-text-dim outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all resize-y"></textarea>
+        </div>
+        <button type="submit" id="cta-contact"
+          class="btn-gradient self-start inline-flex items-center gap-2 px-8 py-3.5 text-white font-semibold rounded-xl shadow-[0_4px_20px_rgba(108,92,231,0.3)] hover:shadow-[0_8px_32px_rgba(108,92,231,0.4)] hover:-translate-y-0.5 transition-all">გაგზავნა</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" class="bg-bg-elevated border-t border-border-custom pt-16 pb-8">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-8">
+      <!-- Footer Top -->
+      <div class="flex flex-col md:flex-row justify-between gap-12 pb-10 border-b border-border-custom mb-8">
+        <!-- Brand -->
+        <div class="max-w-[320px]">
+          <a href="#hero" class="flex items-center gap-2 mb-4">
+            <span class="text-xl text-primary-light animate-logo-pulse">◆</span>
+            <span class="text-xl font-extrabold tracking-tight">Nova<span class="text-primary-light">Tech</span></span>
+          </a>
+          <p class="text-sm text-text-muted leading-relaxed">ინოვაციური ტექნოლოგიური გადაწყვეტილებები თქვენი
+            ბიზნესისთვის.</p>
+        </div>
+
+        <!-- Links -->
+        <div class="flex gap-16">
+          <div>
+            <h4 class="text-sm font-bold uppercase tracking-wider mb-5">კომპანია</h4>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#about" class="text-sm text-text-muted hover:text-primary-light transition-colors">ჩვენს
+                  შესახებ</a></li>
+              <li><a href="#features"
+                  class="text-sm text-text-muted hover:text-primary-light transition-colors">სერვისები</a></li>
+              <li><a href="#contact"
+                  class="text-sm text-text-muted hover:text-primary-light transition-colors">კონტაქტი</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <p class="text-sm text-text-dim">&copy; 2026 NovaTech. ყველა უფლება დაცულია.</p>
+
+        <!-- Social Links -->
+        <div class="flex items-center gap-2">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" id="social-facebook"
+            aria-label="Facebook"
+            class="social-btn w-10 h-10 flex items-center justify-center text-text-muted border border-border-custom rounded-lg hover:text-primary-light hover:border-primary hover:bg-primary/10 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(108,92,231,0.3)] transition-all">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" id="social-twitter"
+            aria-label="Twitter"
+            class="social-btn w-10 h-10 flex items-center justify-center text-text-muted border border-border-custom rounded-lg hover:text-primary-light hover:border-primary hover:bg-primary/10 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(108,92,231,0.3)] transition-all">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id="social-linkedin"
+            aria-label="LinkedIn"
+            class="social-btn w-10 h-10 flex items-center justify-center text-text-muted border border-border-custom rounded-lg hover:text-primary-light hover:border-primary hover:bg-primary/10 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(108,92,231,0.3)] transition-all">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" id="social-github" aria-label="GitHub"
+            class="social-btn w-10 h-10 flex items-center justify-center text-text-muted border border-border-custom rounded-lg hover:text-primary-light hover:border-primary hover:bg-primary/10 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(108,92,231,0.3)] transition-all">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-xl bg-[#12121a]/90 backdrop-blur border border-white/20 text-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-primary hover:border-primary-light hover:shadow-[0_0_20px_rgba(108,92,231,0.5)] hover:-translate-y-1 active:scale-95 shadow-xl">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ===== INLINE JAVASCRIPT ===== -->
+  <script>
+    // ===== MOBILE NAV / CATALOGUE DRAWER =====
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navOverlay = document.getElementById('mobile-overlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function openMobileMenu() {
+      navMenu.classList.add('open');
+      if (navOverlay) {
+        navOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        navOverlay.classList.add('opacity-100', 'pointer-events-auto');
+      }
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      navMenu.classList.remove('open');
+      if (navOverlay) {
+        navOverlay.classList.add('opacity-0', 'pointer-events-none');
+        navOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+      }
+      document.body.style.overflow = '';
+    }
+
+    if (navToggle) navToggle.addEventListener('click', openMobileMenu);
+    if (navClose) navClose.addEventListener('click', closeMobileMenu);
+    if (navOverlay) navOverlay.addEventListener('click', closeMobileMenu);
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // ===== HEADER SCROLL EFFECT =====
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('bg-bg/85', 'backdrop-blur-xl', 'border-b', 'border-border-custom');
+      } else {
+        header.classList.remove('bg-bg/85', 'backdrop-blur-xl', 'border-b', 'border-border-custom');
+      }
+    });
+
+    // ===== ACTIVE NAV LINK & SMOOTH MOVEABLE INDICATOR =====
+    const sections = document.querySelectorAll('section[id]');
+    const navIndicator = document.getElementById('nav-indicator');
+    const navList = document.querySelector('.nav-list-container');
+    const desktopNavLinks = document.querySelectorAll('.nav-list-container .nav-link');
+
+    function moveNavIndicator(targetElement) {
+      if (!navIndicator || !navList || window.innerWidth < 768) {
+        if (navIndicator) navIndicator.style.opacity = '0';
+        return;
+      }
+      if (!targetElement) {
+        navIndicator.style.opacity = '0';
+        return;
+      }
+      const textSpan = targetElement.querySelector('.nav-text') || targetElement;
+      const listRect = navList.getBoundingClientRect();
+      const targetRect = textSpan.getBoundingClientRect();
+
+      const left = targetRect.left - listRect.left;
+      const width = targetRect.width;
+
+      navIndicator.style.left = `${left}px`;
+      navIndicator.style.width = `${width}px`;
+      navIndicator.style.opacity = '1';
+    }
+
+    desktopNavLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        if (window.innerWidth >= 768) moveNavIndicator(this);
+      });
+      link.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 768) moveNavIndicator(link);
+      });
+    });
+
+    if (navList) {
+      navList.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 768) {
+          const activeLink = document.querySelector('.nav-list-container .nav-link.active');
+          if (activeLink) moveNavIndicator(activeLink);
+        }
+      });
+    }
+
+    function updateActiveLink() {
+      let currentSectionId = '';
+      const triggerPoint = window.innerHeight * 0.35;
+
+      if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60)) {
+        currentSectionId = 'contact';
+      } else {
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= triggerPoint && rect.bottom > triggerPoint) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+      }
+
+      if (currentSectionId) {
+        let activeEl = null;
+        navLinks.forEach(link => {
+          if (link.getAttribute('data-section') === currentSectionId) {
+            link.classList.add('active', 'nav-link-active');
+            if (link.closest('.nav-list-container')) {
+              activeEl = link;
+            }
+          } else {
+            link.classList.remove('active', 'nav-link-active');
+          }
+        });
+        if (activeEl) {
+          moveNavIndicator(activeEl);
+        }
+      }
+    }
+    window.addEventListener('scroll', updateActiveLink);
+    window.addEventListener('resize', () => {
+      const activeLink = document.querySelector('.nav-list-container .nav-link.active');
+      if (activeLink) moveNavIndicator(activeLink);
+    });
+    window.addEventListener('load', () => {
+      updateActiveLink();
+      setTimeout(updateActiveLink, 150);
+    });
+    updateActiveLink();
+
+    // ===== NUMBER COUNTER =====
+    function animateCounters() {
+      document.querySelectorAll('.stat-number').forEach(counter => {
+        const target = parseInt(counter.dataset.target);
+        const duration = 2000;
+        const start = performance.now();
+        function update(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counter.textContent = Math.floor(eased * target);
+          if (progress < 1) requestAnimationFrame(update);
+          else counter.textContent = target;
+        }
+        requestAnimationFrame(update);
+      });
+    }
+
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal-item').forEach(el => revealObserver.observe(el));
+
+    // ===== COUNTER OBSERVER =====
+    let counted = false;
+    const statsSection = document.querySelector('.stat-number');
+    if (statsSection) {
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !counted) {
+            counted = true;
+            animateCounters();
+          }
+        });
+      }, { threshold: 0.5 });
+      counterObserver.observe(statsSection.closest('div'));
+    }
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (!href || href === '#') {
+          e.preventDefault();
+          return;
+        }
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // ===== SOCIAL BUTTONS CLICK PROTECTION =====
+    document.querySelectorAll('.social-btn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (!href || href === '#' || href.startsWith('javascript:')) {
+          e.preventDefault();
+        }
+      });
+    });
+
+    // ===== FLOATING BACK TO TOP BUTTON =====
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 350) {
+          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+          backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+          backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+        }
+      });
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // ===== SERVICE CARDS CLICK HANDLER =====
+    document.querySelectorAll('.card-hover-glow').forEach(card => {
+      card.addEventListener('click', function (e) {
+        const service = this.dataset.service || (this.querySelector('.service-link') && this.querySelector('.service-link').dataset.service);
+        const messageInput = document.getElementById('message');
+        if (messageInput && service) {
+          messageInput.value = `გამარჯობა, დაინტერესებული ვარ სერვისით: "${service}". გთხოვთ დამიკავშირდეთ.`;
+          setTimeout(() => messageInput.focus(), 500);
+        }
+        const target = document.querySelector('#contact');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ===== CONTACT FORM =====
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const original = btn.innerHTML;
+        btn.innerHTML = '<span>გაგზავნილია ✓</span>';
+        btn.style.pointerEvents = 'none';
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.style.pointerEvents = 'auto';
+          contactForm.reset();
+        }, 2500);
+      });
+    }
+
+    // ===== CARD HOVER GLOW =====
+    document.querySelectorAll('.card-hover-glow').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.background = `radial-gradient(300px circle at ${x}px ${y}px, rgba(108,92,231,0.06), transparent 60%), rgba(18,18,30,0.6)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.background = ''; });
+    });
+  </script>
+</body>
+
+</html>
